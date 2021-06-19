@@ -6,6 +6,6 @@ read -p "Enter a:" a
 read -p "Enter b:" b
 read -p "Enter c:" c
 
-compute3=$(( $c + $a / $b ))
+compute4=$(( $a % $b + $c ))
 
-echo " compute2:$compute2 "
+echo " compute4:$compute4 "
