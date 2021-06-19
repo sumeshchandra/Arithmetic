@@ -62,4 +62,9 @@ echo "The computation expressions result are"
 for i in ${!expressionResultDict[@]}
 do
     echo $i"="${expressionResultDict[$i]}
+    expressionResultArray[((counter++))]=${expressionResultDict[$i]}
 done
+
+echo "The computation expressions result in Ascending"
+sortedAsc=($(echo ${expressionResultArray[*]}| tr " " "\n" | sort -n))
+echo ${sortedAsc[@]}
